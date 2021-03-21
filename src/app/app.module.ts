@@ -20,6 +20,8 @@ import { AdBannerComponent } from './components/dynamic-components-loading/ad-ba
 import { AdDirective } from './directives/ad/ad.directive';
 import { HeroProfileComponent } from './components/dynamic-components-loading/ads/hero-profile/hero-profile.component';
 import { HeroJobComponent } from './components/dynamic-components-loading/ads/hero-job/hero-job.component';
+import { PipeExampleComponent } from './components/pipe-example/pipe-example.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { HeroJobComponent } from './components/dynamic-components-loading/ads/he
     AdBannerComponent,
     AdDirective,
     HeroProfileComponent,
-    HeroJobComponent
+    HeroJobComponent,
+    PipeExampleComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule
