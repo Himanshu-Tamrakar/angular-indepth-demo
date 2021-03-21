@@ -15,6 +15,11 @@ import { ViewChildComponent } from './components/component-interaction/view-chil
 import { VoteTakerComponent } from './components/component-interaction/vote-taker/vote-taker.component';
 import { VotersComponent } from './components/component-interaction/vote-taker/voters/voters.component';
 import { ComponentStyleComponent } from './components/component-style/component-style.component';
+import { DynamicComponentsLoadingComponent } from './components/dynamic-components-loading/dynamic-components-loading.component';
+import { AdBannerComponent } from './components/dynamic-components-loading/ad-banner/ad-banner.component';
+import { AdDirective } from './directives/ad/ad.directive';
+import { HeroProfileComponent } from './components/dynamic-components-loading/ads/hero-profile/hero-profile.component';
+import { HeroJobComponent } from './components/dynamic-components-loading/ads/hero-job/hero-job.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { ComponentStyleComponent } from './components/component-style/component-
     VoteTakerComponent,
     ViewChildComponent,
     VoteTakerComponent,
-    ComponentStyleComponent
+    ComponentStyleComponent,
+    DynamicComponentsLoadingComponent,
+    AdBannerComponent,
+    AdDirective,
+    HeroProfileComponent,
+    HeroJobComponent
   ],
   imports: [
     BrowserModule

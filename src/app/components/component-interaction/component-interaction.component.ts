@@ -34,9 +34,9 @@ import { ViewChildComponent } from './view-child/view-child.component';
           <li #templateRefVar>this is first element</li>
         </ul>
 
-        <div class="lessons-list" *ngIf="false else loading">
+        <!-- <div class="lessons-list" *ngIf="false else loading">
           ... 
-        </div>  
+        </div>   -->
 
         <ng-template #loading>
           <div>Loading...</div>
@@ -74,11 +74,14 @@ export class ComponentInteractionComponent implements OnInit, AfterViewInit {
   @ViewChild('templateRefVar') templateRefVar;
   @ViewChild('loading', {read: ViewContainerRef}) ngTemplateRefVar;
 
+  @ViewChild('loading', {read: TemplateRef}) ngTemplateRefVar1;
+
   constructor() { }
   ngAfterViewInit(): void {
     console.log(this.viewChildInstance['fullName']);
-    console.log(this.templateRefVar.nativeElement);
+    console.dir(this.templateRefVar.nativeElement.innerText);
     console.log(this.ngTemplateRefVar);
+    console.log(this.ngTemplateRefVar1);
 
 
   }
