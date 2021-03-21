@@ -9,15 +9,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     
   `,
   styles: [`
-    .h2-clr {
+    /* .h1-clr {
       color: red
-    }
+    } */
     .div-brdr {
       background-color: indianred;
     }
   `],
   // encapsulation: ViewEncapsulation.None
-  encapsulation: ViewEncapsulation.Emulated
+  // encapsulation: ViewEncapsulation.Emulated
   // encapsulation: ViewEncapsulation.ShadowDom
 
 })

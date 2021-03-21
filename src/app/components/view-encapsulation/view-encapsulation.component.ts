@@ -20,8 +20,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     }
   `],
   // encapsulation: ViewEncapsulation.ShadowDom
-  encapsulation: ViewEncapsulation.Emulated
-  // encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class ViewEncapsulationComponent implements OnInit {
 

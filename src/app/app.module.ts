@@ -14,6 +14,7 @@ import { ComponentInteractionChildComponent } from './components/component-inter
 import { ViewChildComponent } from './components/component-interaction/view-child/view-child.component';
 import { VoteTakerComponent } from './components/component-interaction/vote-taker/vote-taker.component';
 import { VotersComponent } from './components/component-interaction/vote-taker/voters/voters.component';
+import { ComponentStyleComponent } from './components/component-style/component-style.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VotersComponent } from './components/component-interaction/vote-taker/v
     VotersComponent,
     VoteTakerComponent,
     ViewChildComponent,
-    VoteTakerComponent
+    VoteTakerComponent,
+    ComponentStyleComponent
   ],
   imports: [
     BrowserModule
