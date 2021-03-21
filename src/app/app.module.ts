@@ -22,6 +22,7 @@ import { HeroProfileComponent } from './components/dynamic-components-loading/ad
 import { HeroJobComponent } from './components/dynamic-components-loading/ads/hero-job/hero-job.component';
 import { PipeExampleComponent } from './components/pipe-example/pipe-example.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     HeroProfileComponent,
     HeroJobComponent,
     PipeExampleComponent,
-    FilterPipe
+    FilterPipe,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule
