@@ -23,6 +23,10 @@ import { HeroJobComponent } from './components/dynamic-components-loading/ads/he
 import { PipeExampleComponent } from './components/pipe-example/pipe-example.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
+import { AttrClassStyleBindingComponent } from './components/attr-class-style-binding/attr-class-style-binding.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { TwoWayBindingChildComponent } from './components/two-way-binding/two-way-binding-child/two-way-binding-child.component';
+import { SizerComponent } from './components/two-way-binding/sizer/sizer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { PropertyBindingComponent } from './components/property-binding/property
     HeroJobComponent,
     PipeExampleComponent,
     FilterPipe,
-    PropertyBindingComponent
+    PropertyBindingComponent,
+    AttrClassStyleBindingComponent,
+    TwoWayBindingComponent,
+    TwoWayBindingChildComponent,
+    SizerComponent
   ],
   imports: [
     BrowserModule
