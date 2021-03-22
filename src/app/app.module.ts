@@ -27,6 +27,9 @@ import { AttrClassStyleBindingComponent } from './components/attr-class-style-bi
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { TwoWayBindingChildComponent } from './components/two-way-binding/two-way-binding-child/two-way-binding-child.component';
 import { SizerComponent } from './components/two-way-binding/sizer/sizer.component';
+import { TemplateRefVarComponent } from './components/template-ref-var/template-ref-var.component';
+import { TemplateRefVarChildComponent } from './components/template-ref-var/template-ref-var-child/template-ref-var-child.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,10 +59,13 @@ import { SizerComponent } from './components/two-way-binding/sizer/sizer.compone
     AttrClassStyleBindingComponent,
     TwoWayBindingComponent,
     TwoWayBindingChildComponent,
-    SizerComponent
+    SizerComponent,
+    TemplateRefVarComponent,
+    TemplateRefVarChildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
