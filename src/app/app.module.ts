@@ -30,6 +30,8 @@ import { SizerComponent } from './components/two-way-binding/sizer/sizer.compone
 import { TemplateRefVarComponent } from './components/template-ref-var/template-ref-var.component';
 import { TemplateRefVarChildComponent } from './components/template-ref-var/template-ref-var-child/template-ref-var-child.component';
 import { FormsModule } from '@angular/forms';
+import { SvgAsTemplateComponent } from './components/svg-as-template/svg-as-template.component';
+import { BuildInDirectivesComponent } from './components/build-in-directives/build-in-directives.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { FormsModule } from '@angular/forms';
     TwoWayBindingChildComponent,
     SizerComponent,
     TemplateRefVarComponent,
-    TemplateRefVarChildComponent
+    TemplateRefVarChildComponent,
+    SvgAsTemplateComponent,
+    BuildInDirectivesComponent
   ],
   imports: [
     BrowserModule,
