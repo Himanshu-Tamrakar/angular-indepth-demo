@@ -35,6 +35,9 @@ import { BuildInDirectivesComponent } from './components/build-in-directives/bui
 import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { AttributeDirectiveExampleComponent } from './components/attribute-directive/attribute-directive-example/attribute-directive-example.component';
+import { StructuralDirectiveExampleComponent } from './components/structural-directive-example/structural-directive-example.component';
+import { StructuralDirectiveComponent } from './components/structural-directive-example/structural-directive/structural-directive.component';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { AttributeDirectiveExampleComponent } from './components/attribute-direc
     BuildInDirectivesComponent,
     AttributeDirectiveComponent,
     HighlightDirective,
-    AttributeDirectiveExampleComponent
+    AttributeDirectiveExampleComponent,
+    StructuralDirectiveExampleComponent,
+    StructuralDirectiveComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
