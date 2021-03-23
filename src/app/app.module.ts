@@ -32,6 +32,9 @@ import { TemplateRefVarChildComponent } from './components/template-ref-var/temp
 import { FormsModule } from '@angular/forms';
 import { SvgAsTemplateComponent } from './components/svg-as-template/svg-as-template.component';
 import { BuildInDirectivesComponent } from './components/build-in-directives/build-in-directives.component';
+import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
+import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { AttributeDirectiveExampleComponent } from './components/attribute-directive/attribute-directive-example/attribute-directive-example.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,10 @@ import { BuildInDirectivesComponent } from './components/build-in-directives/bui
     TemplateRefVarComponent,
     TemplateRefVarChildComponent,
     SvgAsTemplateComponent,
-    BuildInDirectivesComponent
+    BuildInDirectivesComponent,
+    AttributeDirectiveComponent,
+    HighlightDirective,
+    AttributeDirectiveExampleComponent
   ],
   imports: [
     BrowserModule,
