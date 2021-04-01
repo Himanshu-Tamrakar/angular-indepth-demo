@@ -38,6 +38,8 @@ import { AttributeDirectiveExampleComponent } from './components/attribute-direc
 import { StructuralDirectiveExampleComponent } from './components/structural-directive-example/structural-directive-example.component';
 import { StructuralDirectiveComponent } from './components/structural-directive-example/structural-directive/structural-directive.component';
 import { UnlessDirective } from './directives/unless.directive';
+import { PostComponent } from './components/component-lifecycle/post/post.component';
+import { CommentComponent } from './components/component-lifecycle/post/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +79,9 @@ import { UnlessDirective } from './directives/unless.directive';
     AttributeDirectiveExampleComponent,
     StructuralDirectiveExampleComponent,
     StructuralDirectiveComponent,
-    UnlessDirective
+    UnlessDirective,
+    PostComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,

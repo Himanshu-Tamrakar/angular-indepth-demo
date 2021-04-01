@@ -1,0 +1,8 @@
+<p>post works!</p>
+
+<input type="text" placeholder="Enter Comment" #comment (keyup.enter)="addPost(comment)">
+
+<div>
+    <h1>Comments</h1>
+    <app-comment *ngFor="let comment of comments" [comment]="comment" (remove)="onRemove($event)"></app-comment>
+</div>

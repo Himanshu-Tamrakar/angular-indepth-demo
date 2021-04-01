@@ -3,6 +3,7 @@ import {
   AfterContentInit,
   AfterViewChecked,
   AfterViewInit,
+  ChangeDetectionStrategy,
   DoCheck,
   Input,
   OnChanges,
@@ -13,11 +14,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-child1',
   template: `
-    <p>child1 works!</p> 
-    Input Property: {{name}} 
-    <button type="submit" (click)="''">Click Child1</button>
+    <p>child1 works!</p>
+    Input Property Name: {{ name }} <br />
+    Input Property Age: {{ age }} <br />
+    Input Property user: {{ user | json }} <br />
+    <button type="submit" (click)="('')">Click Child1</button>
   `,
   styles: [`'./child1.component.scss'`],
+  /* changeDetection: ChangeDetectionStrategy.OnPush, */
 })
 export class Child1Component
   implements
@@ -29,6 +33,10 @@ export class Child1Component
     AfterViewInit,
     AfterViewChecked {
   @Input('name') name: string;
+  @Input('age') age: number;
+
+  @Input('user') user: object;
+
   constructor() {
     console.group('Child1Component');
   }
@@ -42,6 +50,7 @@ export class Child1Component
   }
   ngDoCheck(): void {
     console.log('%c Child1Component:: ngDoCheck', 'color: green');
+    console.log(this.user);
   }
   ngAfterContentInit(): void {
     console.log('%c Child1Component:: ngAfterContentInit', 'color: green');
