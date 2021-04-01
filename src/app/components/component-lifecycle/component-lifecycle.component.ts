@@ -25,7 +25,7 @@ import {
     <app-child1 [name]="name" [age]="age" [user]="user"></app-child1>
   `,
   styles: [``],
-  // changeDetection: ChangeDetectionStrategy.OnPush,s
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ComponentLifecycleComponent
   implements
