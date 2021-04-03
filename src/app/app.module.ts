@@ -40,6 +40,23 @@ import { StructuralDirectiveComponent } from './components/structural-directive-
 import { UnlessDirective } from './directives/unless.directive';
 import { PostComponent } from './components/component-lifecycle/post/post.component';
 import { CommentComponent } from './components/component-lifecycle/post/comment/comment.component';
+import { HostSelectorComponent } from './components/host-selector/host-selector.component';
+import { ChildComponent } from './components/host-selector/child/child.component';
+import { AsyncPipeComponent } from './components/async-pipe/async-pipe.component';
+import { LoggerService } from './dependency-injection/services/logger.service';
+import { HeroService } from './dependency-injection/services/hero.service';
+import { HeroComponent } from './dependency-injection/components/hero/hero.component';
+import { DependencyInjectionExampleComponent } from './dependency-injection/components/dependency-injection-example/dependency-injection-example.component';
+import { BetterLogger } from './dependency-injection/services/better-logger';
+import { EvenBetterLogger } from './dependency-injection/services/even-better-logger';
+import { forwardRef } from '@angular/core';
+import {
+  APP_CONFIG,
+  HERO_DI_CONFIG,
+  SilentLogger,
+} from './dependency-injection/services/silent-logger';
+import { UserService } from './dependency-injection/services/user.service';
+import { LogService } from './dependency-injection/services/log.service';
 
 @NgModule({
   declarations: [
@@ -81,13 +98,35 @@ import { CommentComponent } from './components/component-lifecycle/post/comment/
     StructuralDirectiveComponent,
     UnlessDirective,
     PostComponent,
-    CommentComponent
+    CommentComponent,
+    HostSelectorComponent,
+    ChildComponent,
+    AsyncPipeComponent,
+    HeroComponent,
+    DependencyInjectionExampleComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
+  imports: [BrowserModule, FormsModule],
+  providers: [
+    // { provide: LoggerService, useClass: LoggerService },
+    { provide: HeroService, useClass: HeroService },
+    // { provide: LoggerService, useClass: BetterLogger },
+    { provide: LoggerService, useClass: EvenBetterLogger },
+    { provide: EvenBetterLogger, useExisting: LoggerService },
+    // { provide: EvenBetterLogger, useClass: HeroComponent },
+    // { provide: LoggerService, useValue: SilentLogger },
+    { provide: APP_CONFIG, useValue: HERO_DI_CONFIG },
+
+    // { provide: UserService, useClass: UserService }, //wrong
+    // LogService,
+    {
+      provide: UserService,
+      // deps: [LogService],
+      useFactory: (logger: LogService) => {
+        const log = new LogService();
+        return new UserService(log);
+      },
+    },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
